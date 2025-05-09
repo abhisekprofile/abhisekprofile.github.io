@@ -463,6 +463,86 @@
       box-shadow: 0 5px 15px rgba(0,255,234,0.3);
     }
 
+    <style>
+  /* Certifications Section */
+  #certifications {
+    background: var(--dark);
+  }
+  
+  .certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .certification-card {
+    background: var(--dark-light);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary);
+  }
+  
+  .certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,255,234,0.1);
+  }
+  
+  .certification-logo {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .certification-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .certification-content {
+    flex: 1;
+  }
+  
+  .certification-content h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .certification-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+  }
+  
+  .certification-meta i {
+    margin-right: 0.3rem;
+    color: var(--primary);
+  }
+  
+  .certification-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .certification-link:hover {
+    color: var(--light);
+    transform: translateX(5px);
+  }
+
+
     /* Blog Section Styles */
 #blog {
   background: var(--dark-light);
@@ -913,6 +993,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#blog">Blog</a></li> <!-- Add this line -->
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -931,12 +1012,20 @@
       <span class="typed-text"></span>
       <p>Protecting digital assets through innovative security solutions and ethical hacking practices.</p>
       <div class="social-links">
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="HackerRank"><i class="fab fa-hackerrank"></i></a>
-      </div>
-    </div>
+        <div class="social-links">
+  <a href="https://www.linkedin.com/in/abhisekprofile" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://twitter.com/abhisekprofile" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://github.com/abhisekprofile" target="_blank" aria-label="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://medium.com/@abhisekprofile" target="_blank" aria-label="Medium">
+    <i class="fab fa-medium"></i>
+  </a>
+</div>
   </section>
 
   <!-- About Section -->
@@ -1134,6 +1223,68 @@
     </div>
   </section>
 
+  <!-- Add this section between Projects and Blog sections -->
+<section id="certifications" class="section">
+  <div class="section-title" data-aos="fade-up">
+    <h2>My Certifications</h2>
+  </div>
+  <div class="certifications-container">
+    <!-- CEH Certification -->
+    <div class="certification-card" data-aos="zoom-in">
+      <div class="certification-logo">
+        <img src="https://www.eccouncil.org/wp-content/uploads/2022/05/CEH-Badge.png" alt="CEH Certification">
+      </div>
+      <div class="certification-content">
+        <h3>Certified Ethical Hacker (CEH)</h3>
+        <div class="certification-meta">
+          <span><i class="fas fa-award"></i> EC-Council</span>
+          <span><i class="far fa-calendar-alt"></i> June 2023</span>
+        </div>
+        <p>Validated expertise in network security, penetration testing, and vulnerability assessment.</p>
+        <a href="https://aspen.eccouncil.org/VerifyBadge?badge=YOUR-BADGE-ID" target="_blank" class="certification-link">
+          Verify Certification <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- CompTIA Security+ -->
+    <div class="certification-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="certification-logo">
+        <img src="https://www.comptia.org/images/default-source/default-album/comptia-security--logo.png" alt="Security+ Certification">
+      </div>
+      <div class="certification-content">
+        <h3>CompTIA Security+</h3>
+        <div class="certification-meta">
+          <span><i class="fas fa-award"></i> CompTIA</span>
+          <span><i class="far fa-calendar-alt"></i> March 2023</span>
+        </div>
+        <p>Demonstrated baseline cybersecurity skills for IT security professionals.</p>
+        <a href="https://www.certmetrics.com/comptia/public/verification.aspx?code=YOUR-CERT-CODE" target="_blank" class="certification-link">
+          Verify Certification <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- OSCP Certification -->
+    <div class="certification-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="certification-logo">
+        <img src="https://www.offensive-security.com/wp-content/uploads/2019/01/oscp-logo.png" alt="OSCP Certification">
+      </div>
+      <div class="certification-content">
+        <h3>Offensive Security Certified Professional (OSCP)</h3>
+        <div class="certification-meta">
+          <span><i class="fas fa-award"></i> Offensive Security</span>
+          <span><i class="far fa-calendar-alt"></i> January 2024</span>
+        </div>
+        <p>Proven ability to identify vulnerabilities and execute organized attacks.</p>
+        <a href="https://www.credential.net/YOUR-CREDENTIAL-ID" target="_blank" class="certification-link">
+          Verify Certification <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- NEW BLOG SECTION -->
 <section id="blog" class="section">
   <div class="section-title" data-aos="fade-up">
@@ -1198,12 +1349,12 @@
     <div class="footer-content">
       <div class="logo">Abhishek Kumar</div>
       <div class="footer-links">
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-hackerrank"></i></a>
-        <a href="#"><i class="fas fa-envelope"></i></a>
-      </div>
+      <a href="https://www.linkedin.com/in/abhisekprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/abhisekprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/abhisekprofile" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://medium.com/@abhisekprofile" target="_blank"><i class="fab fa-medium"></i></a>
+      <a href="https://instagram.com/abhisekprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
       <div class="copyright">
         &copy; <span id="year"></span> Abhishek Kumar. All rights reserved.
       </div>
